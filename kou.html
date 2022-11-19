@@ -37,10 +37,12 @@
   tfoot {
     background-color: #3f87a6;
     color: #fff;
+    text-align: center;
 }
 
 tbody {
     background-color: #e4f0f5;
+    text-align: center;
 }
 
 caption {
@@ -52,6 +54,7 @@ table {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
     letter-spacing: 1px;
+    text-align: center;
     font-family: sans-serif;
     font-size: .8rem;
 }
@@ -123,11 +126,13 @@ td {
           >
             <thead>
               <tr>
+                <th>구분</th>
                 <th>2022년 수입 내역</th>
                 <th scope="col">입금액</th>
               </tr>
             </thead>
             <tbody>
+              <th rowspan="6">입금</th>
                 <td><h3 style="font-weight: 600">전기이월</h3></td>
                 <td> 872,298</td>
               <tr>
@@ -145,10 +150,10 @@ td {
                         <tr>
                             <td>기타예금이자</td>
                             <td style="color: teal; font-weight: 600">230</td>
-                        </tr>
+                        </tr>  
                  </tbody>       
                  <tfoot>
-                  <th>입금계</th>
+                  <th colspan="2">입금계</th>
                   <td>4,721,672</td>
                  </tfoot>
                  </table>
@@ -160,11 +165,13 @@ td {
           >
             <thead>
               <tr>
+                <th>구분</th>
                 <th>2022년 지출 내역</th>
                 <th scope="col">출금액</th>
               </tr>
             </thead>
             <tbody>
+              <th rowspan="7">출금</th>
                 <td>김상섭회원 자녀결혼경조금</td>
                 <td style="color: teal; font-weight: 600">100,000</td>
               <tr>
@@ -189,11 +196,11 @@ td {
                       </tr>
                  </tbody>
                  <tfoot style="background-color: teal;">
-                  <th>잔액(정기예금 1,000천원 + 입출금통장 1,554천원) </th>
+                  <th colspan="2">잔액(정기예금 1,000천원 + 입출금통장 1,554천원) </th>
                   <td style="font-size: 35px;">2,553,672</td>
                  </tfoot>       
                  <tfoot>
-                  <th>출금계</th>
+                  <th colspan="2">출금계</th>
                   <td>3,168,040</td>
                  </tfoot>
                  </table>
