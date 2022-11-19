@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title> 고우회 회계 보고 자료</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap JS -->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!-- bootstrap CSS -->
+    <link
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+            padding: 10px;
+            margin: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #barcode {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 250px;
+    height: 65px;
+    padding: 10px;
+    border: 3px solid darkblue white;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgba(172, 58, 32, 0.772);
+    color: whitesmoke;
+    text-align: center;
+  }
+  tfoot {
+    background-color: #3f87a6;
+    color: #fff;
+}
+
+tbody {
+    background-color: #e4f0f5;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: .8rem;
+}
+
+td {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 10px;
+    font-size: 20px;
+    text-align: center;
+}
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #e4f0f5;
+    text-align: center;
+    background-color: #3f87a6;
+}
+
+td {
+    text-align: center;
+}
+    </style>
+  </head>
+  <body>
+    <h3 style="font-weight: 600; color: teal">
+      # 고우회 회계 보고 자료 (2022.11.22)
+    </h3>
+    <hr />
+    <!--<div id="passinput">
+      <p style="font-size: 20px; font-weight: 600; color: gray">
+        
+        <input id="nameinput" type="text" placeholder="김설호" />
+        password
+        <input id="info" type="password" placeholder="" />
+        <button
+          id="submit"
+          type="submit"
+          style="font-size: 15px"
+          onclick="submitClick()"
+        >
+          Login
+        </button>
+      </p>
+    </div>
+    <div id="paytable">
+      <br />
+      <select id="selectbox" name="selectbox" onchange="changeLangSelect()">
+        <option value="0" selected="selected">급여지급월 선택</option>
+        <option value="9" style="background-color: rgb(157, 184, 157);">2022년 9월</option>
+        <option value="10" style="background-color: rgb(157, 184, 157);">2022년 10월</option>
+        <option value="11" style="background-color: rgb(157, 184, 157);">2022년 11월</option>
+        <option value="12">2022년 12월</option>
+      </select>
+      <hr />-->
+      <div id="month-nine">
+        <h3 style="font-weight: 600">
+          📑2022년 고우회 수입.지출내역(2022.1.1 ~ 11.18)<br/>
+        <h4 style="font-weight: 600; text-align: end;" >(단위:원)</h4>
+        
+        </h3>
+        
+        <div class="row">
+        <table
+            id="example-table-2"
+            width="100%"
+            class="table table-bordered table-hover text-center"
+            style="none"
+          >
+            <thead>
+              <tr>
+                <th>2022년 수입 내역</th>
+                <th scope="col">입금액</th>
+              </tr>
+            </thead>
+            <tbody>
+                <td><h4 style="font-weight: 600">전기이월</h4></td>
+                <td> 872,298</td>
+              <tr>
+                <td>회비(자동이체)</td>
+                <td style="color: teal; font-weight: 600" onclick="kou_01()">1,100,000</td>
+              </tr>
+              <tr>
+                <td>회비(원외회원 5명)</td>
+                <td style="color: teal; font-weight: 600" onclick="kou_02()">600,000</td>
+                </tr>
+                <tr>
+                    <td>정기예금만기 + 이자 149천원 포함</td>
+                    <td style="color: teal; font-weight: 600" onclick="kou_03()">2,149,144</td>
+                </tr>
+                        <tr>
+                            <td>기타예금이자</td>
+                            <td style="color: teal; font-weight: 600">230</td>
+                        </tr>
+                 </tbody>       
+                 <tfoot>
+                  <th>입금계</th>
+                  <td>4,721,672</td>
+                 </tfoot>
+                 </table>
+                 <table
+            id="example-table-2"
+            width="100%"
+            class="table table-bordered table-hover text-center"
+            style="none"
+          >
+            <thead>
+              <tr>
+                <th>2022년 지출 내역</th>
+                <th scope="col">출금액</th>
+              </tr>
+            </thead>
+            <tbody>
+                <td>김상섭회원 자녀결혼경조금</td>
+                <td style="color: teal; font-weight: 600">100,000</td>
+              <tr>
+                <td>권명호회원 입원 병문안</td>
+                <td style="color: teal; font-weight: 600" onclick="kou_01()">32,000</td>
+              </tr>
+              <tr>
+                <td>설선물(33,000원 * 16명)</td>
+                <td style="color: teal; font-weight: 600" onclick="kou_02()">528,000</td>
+                </tr>
+                <tr>
+                    <td>추석선물(민어굴비 94,000 * 16명)</td>
+                    <td style="color: teal; font-weight: 600" onclick="kou_03()">1,504,000</td>
+                </tr>
+                        <tr>
+                            <td>정기예탁 (1년/4.83%/신협)</td>
+                            <td style="color: teal; font-weight: 600">1,000,000</td>
+                        </tr>
+                        <tr>
+                          <td>SMS이용료 등 수수료</td>
+                          <td style="color: teal; font-weight: 600">4,000</td>
+                      </tr>
+                 </tbody>
+                 <tfoot style="background-color: teal;">
+                  <th>잔액(정기예금 1,000천원 + 입출금통장 1,554천원) </th>
+                  <td style="font-size: 25px;">2,553,672</td>
+                 </tfoot>       
+                 <tfoot>
+                  <th>출금계</th>
+                  <td>3,168,040</td>
+                 </tfoot>
+                 </table>
+          <h3 style="font-weight: 600;"># 회비 현 잔액(22.11.18기준): 정기예금 1,000,000원 + 입출금 1,553,672 = <mark>2,553,672원</mark> </h3>
+      <hr>
+      <span
+        id="barcode"
+        style="cursor: hand"
+        onclick="if(codebox.style.display==`none`)
+    {codebox.style.display=``; barcode.innerText = `통장원장 닫기▲`} else {codebox.style.display = `none`; 
+   barcode.innerText = `🔍통장원장 보기▼`}"
+        >🔍통장원장 보기 ▼</span>
+
+      <div id="codebox" style="display: none">
+        <iframe src="img/kou_2022.jpg" width="100%" height="800px"></iframe>
+      </div>
+      <br /><br/>
+      <h3 style="font-weight: 600;"> 🎉 고우회 회비 통장 계좌번호: 신협 132-073-985735(김설호:고우회) </h3>
+      <script>
+        function kou_01() {
+          alert("원내 회원 9명 및 권세혁 10명 매월 1만원 자동이체 회비 납입액")
+        }
+        function kou_02() {
+          alert("원외 회원: 권명호,정재영,박수영,김동석,손병욱 회원 5명 회비 납입")
+        }
+        function kou_03() {
+          alert("원금 2,000,000원 + 이자 149,144원 입금(만기 인출")
+        }
+      </script>
+      <!--
+        <span
+        id="loancode"
+        style="cursor: hand"
+        onclick="if(loanbox.style.display==`none`)
+   {loanbox.style.display=``; loancode.innerText = `연급여표 닫기▲`} else {loanbox.style.display = `none`; 
+   loancode.innerText = `🔍2022 연급여표 보기▼`}"
+        >🔍2022 연급여표 보기 ▼</span
+      >
+      <div id="loanbox" style="display: none">
+        <iframe src="img/2022pay_year.jpg" width="750" height="600px"></iframe>
+      </div>-->
+      <hr />
+      <div id="print&email" style="padding: 10px;">
+      <button onclick="print_current_page()" style="border: none; font-size: 20px;">🖨️print</button>
+      <button style="border: none; font-size: 20px;"><a href="mailto:sktseolho@gmail.com" style="color:teal; text-decoration: none; font-weight: 600;">📧문의</a>
+      </button>
+      </div>
+      </div>
+    <!--
+    <div class="bottom">
+    </div>
+    <script>
+      const inputValue = document.getElementById("info");
+
+      function submitClick() {
+        console.log("done");
+        var actualPw = "1";
+        var inputPw = inputValue.value;
+
+        if (inputPw == actualPw) {
+          const nameInput = document.getElementById("nameinput");
+          var nameValue = nameInput.value;
+          alert("김설호 선생님 환영합니다.");
+
+          document.getElementById("paytable").style.display = "block";
+          document.getElementById("passinput").style.display = "none";
+        }
+        /*if (inputPw == actualPw)
+        if (month_Ten) {
+          alert ("password가 일치합니다");
+          do.getElementById("month_ten").style.display = "block";
+          document.getElementById("barcode").style.display = "block";
+          document.getElementById("loancode").style.display = "block";
+          document.getElementById("passinput").style.display = "none";
+        }*/
+        if (inputPw !== actualPw) {
+          alert("password가 다르거나 입력되지 않았습니다");
+        }
+      }
+    </script>
+     <script>
+      function changeLangSelect() {
+        console.log("done");
+        var langSelect = document.getElementById("selectbox");
+        var selectValue = langSelect.options[langSelect.selectedIndex].value;
+
+        if (selectValue == "9") {
+          document.getElementById("month-nine").style.display = "block";
+          document.getElementById("month-ten").style.display = "none";
+          document.getElementById("month-11").style.display = "none";
+          document.getElementById("print&email").style.display = "block";
+        }
+        if (selectValue == "10") {
+          console.log("10월 선택")
+          document.getElementById("month-nine").style.display = "none";
+          document.getElementById("month-ten").style.display = "block";
+          document.getElementById("month-11").style.display = "none";
+          document.getElementById("print&email").style.display = "block";
+        }
+        if (selectValue == "11") {
+          console.log("11월 선택")
+          document.getElementById("month-nine").style.display = "none";
+          document.getElementById("month-ten").style.display = "none";
+          document.getElementById("month-11").style.display = "block";
+          document.getElementById("print&email").style.display = "block";
+        }
+        if (selectValue == "0") {
+          alert("🚨급여 지급월을 선택하세요~~");
+          document.getElementById("month-nine").style.display = "none";
+          document.getElementById("month-ten").style.display = "none";
+          document.getElementById("month-11").style.display = "none";
+          document.getElementById("print&email").style.display = "block";
+        }
+        if (selectValue == "12") {
+          document.getElementById("month-nine").style.display = "none";
+          document.getElementById("month-ten").style.display = "none";
+          document.getElementById("month-11").style.display = "none";
+          document.getElementById("print&email").style.display = "block";
+          alert(
+            "🚨아직 급여 지급전입니다. 📆 급여지급일 이후에 조회하여 주시기 바랍니다!"
+          );
+        }
+      }
+    </script>-->
+    <script>
+      /*아래, 우측마우스 클릭 잠금 
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+      document.addEventListener(`contextmenu`, (event) =>
+        alert("🚨개인정보보호를 위해 마우스 우측버튼 사용불가")
+      );*/
+      function print_current_page() {
+        document.getElementById("print&email").style.display = "block";
+        window.print();
+      }
+    </script>
+  </body>
+</html>
