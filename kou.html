@@ -14,10 +14,10 @@
     />
     <style>
         body {
+            width: 98%;
             padding: 10px;
             margin: 5px;
             padding-left: 10px;
-            padding-right: 10px;
         }
         #barcode {
     font-size: 20px;
@@ -201,11 +201,11 @@ td {
                   <td>3,168,040</td>
                  </tfoot>
                  </table>
-          <h2 style="font-weight: 600;"># 회비 현 잔액(22.11.18기준): 정기예금 1,000,000원 + 입출금 1,553,672 = <mark>2,553,672원</mark> </h2>
+          <h2 style="font-weight: 600; margin: 10px;"># 회비 현 잔액(22.11.18기준): 정기예금 1,000,000원 + 입출금 1,553,672 = <mark>2,553,672원</mark> </h2>
       <hr>
       <span
         id="barcode"
-        style="cursor: hand"
+        style="cursor: hand; margin: 10px;"
         onclick="if(codebox.style.display==`none`)
     {codebox.style.display=``; barcode.innerText = `통장원장 닫기▲`} else {codebox.style.display = `none`; 
    barcode.innerText = `🔍통장원장 보기▼`}"
